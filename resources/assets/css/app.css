@@ -1,0 +1,33 @@
+/**/
+/**/
+/**/
+/***********************************************************/
+/*                        MI APP CSS                       */
+/***********************************************************/
+
+body{
+ padding-top: 90px;
+}
+
+.bq-logo-h{
+ height: 90px;
+}
+
+.bq-img{
+ height: 180px;
+ padding-top: 10px; }
+
+.bq-navbar{
+ background-color: white; }
+.bq-navbar-brand-w{
+    width: 100%;   }
+
+.well {
+ background-color: grey; }
+
+.background-orange {
+background-color: #F27F41 !important; }
+
+.text-white {
+  color: #FFFFFF !important; }
+}
