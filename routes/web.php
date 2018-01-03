@@ -15,3 +15,8 @@ Route::get('/', 'HomeController@getHome')->name('home');
 
 Route::get('/login', 'HomeController@getLogin')->name('login');
 Route::post('/login', 'HomeController@postLogin')->name('login');
+Route::get('/logout', 'HomeController@getLogOut')->name('logout');
+
+Route::get('/productos/listado', 'ProductosController@getProductos')
+        ->name('prod.listado')
+        ->middleware('auth');

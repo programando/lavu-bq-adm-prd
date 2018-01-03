@@ -2,7 +2,11 @@
 @section('content')
     <div class="container text-center">
         <br>
-        <h1 >  @Lang('app.titulo') </h1>
+        @if ( Auth::check())
+            <h1 >  @Lang('app.titulo') {{ "Logueado"}} </h1>
+            @else
+            <h1 >  @Lang('app.titulo') </h1>
+        @endif
         <br><br>
 
         <div class="row">

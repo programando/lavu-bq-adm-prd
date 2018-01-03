@@ -9,14 +9,23 @@
 
 </a>
 
-{{--
-  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="#">Ingresar </a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">Ventas Online</a>    </li>
-      <li class="nav-item"><a class="nav-link " href="#">Balquimia</a> </li>
-    </ul>
-  </div>
---}}
+   @if ( !Auth::check())
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#">Ingresar </a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Ventas Online</a>    </li>
+            <li class="nav-item"><a class="nav-link " href="#">Balquimia</a> </li>
+          </ul>
+        </div>
+        @else
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="{{ route('logout') }}">Cerrar Sesión </a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Ventas Online</a>    </li>
+              <li class="nav-item"><a class="nav-link " href="#">Balquimia</a> </li>
+            </ul>
+          </div>
+       @endif
+
 </nav>
-<h4>Administrador de Productos</h4>
+
